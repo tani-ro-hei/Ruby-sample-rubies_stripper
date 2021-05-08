@@ -3,7 +3,7 @@
 
 input_file = './Luke_orig.txt'
 output_file = './Luke_strip.txt'
-ruby_saving = './saving.dat'
+rubies_saving = './saving.dat'
 
 
 # ソースファイルを読込み
@@ -74,9 +74,9 @@ File.open(output_file, 'wb:UTF-8') { |f|
 }
 puts "File<#{output_file}> を出力しました。"
 
-File.open(ruby_saving, 'wb:UTF-8') { |f|
+File.open(rubies_saving, 'wb:UTF-8') { |f|
     f.write dat
 }
-puts "File<#{ruby_saving}> を出力しました。"
+puts "File<#{rubies_saving}> を出力しました。"
 
 puts '正常終了！'

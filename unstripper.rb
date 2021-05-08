@@ -3,7 +3,7 @@
 
 input_file = './processed.txt'
 output_file = './Luke_unstrip.txt'
-ruby_saving = './saving.dat'
+rubies_saving = './saving.dat'
 
 
 # ソースファイルを読込み
@@ -16,10 +16,10 @@ File.open(input_file, 'r:UTF-8') { |f|
 puts "File<#{input_file}> を読込みました。#{lines.length}行あります。"
 
 dat = ''
-File.open(ruby_saving, 'r:UTF-8') { |f|
+File.open(rubies_saving, 'r:UTF-8') { |f|
     dat = f.read
 }
-puts "File<#{ruby_saving}> を読込みました。#{dat.length}文字あります。"
+puts "File<#{rubies_saving}> を読込みました。#{dat.length}文字あります。"
 
 
 # ルビデータをパースしてハッシュ構築
