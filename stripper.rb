@@ -1,9 +1,13 @@
 
 
 
-input_file = './Luke_orig.txt'
-output_file = './Luke_strip.txt'
-ruby_saving = './saving.dat'
+def get_path(filename)
+    return File.expand_path("../#{filename}", __FILE__)
+end
+
+input_file  = get_path 'Luke_orig.txt'
+output_file = get_path 'Luke_strip.txt'
+ruby_saving = get_path 'saving.dat'
 
 
 # ソースファイルを読込み

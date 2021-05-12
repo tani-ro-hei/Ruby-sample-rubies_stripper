@@ -1,9 +1,13 @@
 
 
 
-input_file = './processed.txt'
-output_file = './Luke_unstrip.txt'
-rubies_saving = './saving.dat'
+def get_path(filename)
+    return File.expand_path("../#{filename}", __FILE__)
+end
+
+input_file  = get_path 'processed.txt'
+output_file = get_path 'Luke_unstrip.txt'
+ruby_saving = get_path 'saving.dat'
 
 
 # ソースファイルを読込み
@@ -16,10 +20,10 @@ File.open(input_file, 'r:UTF-8') { |f|
 puts "File<#{input_file}> を読込みました。#{lines.length}行あります。"
 
 dat = ''
-File.open(rubies_saving, 'r:UTF-8') { |f|
+File.open(ruby_saving, 'r:UTF-8') { |f|
     dat = f.read
 }
-puts "File<#{rubies_saving}> を読込みました。#{dat.length}文字あります。"
+puts "File<#{ruby_saving}> を読込みました。#{dat.length}文字あります。"
 
 
 # ルビデータをパースしてハッシュ構築
